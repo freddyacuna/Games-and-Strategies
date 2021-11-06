@@ -1,1 +1,2 @@
 # Games-and-Strategies
+Objective: The main purpose of this course is that students understand and apply the fundamental concepts of Business Economics to the decision-making process conducted within organizations. An essential component of the course is the application of game-theoretical models to real-world problems such as executive incentive schemes, corporate governance, entrepreneurship Önance and bargaining processes.
