@@ -1,0 +1,548 @@
+\documentclass{exam}
+
+
+%==================================================================================
+% I. Preambulo
+%==================================================================================
+%----------------------------------------------------------------------------------
+% 1.Paquetes
+%----------------------------------------------------------------------------------
+\usepackage[spanish]{babel}			% Permite escribir en espanol
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}						% Para ecuaciones y demases
+\usepackage{amsthm}							% Para ecuaciones y demases
+\usepackage{amssymb}						% Para ecuaciones y demases
+\usepackage{graphicx} 					% Para insertar graficos
+\usepackage{float}							% Para manejar la ubicacion de graficos
+\usepackage{verbatim}						% Para escribir codigos
+\usepackage{url}								% Para escribir direcciones web
+\usepackage{subfig}							% Para poner varias figuras en el mismo marco
+\usepackage{psfrag}							% Para hacer reemplazos en las figuras
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{bigstrut}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{geometry}
+
+\usepackage{color}
+	\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+	\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
+	\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+\usepackage{multirow,hhline}
+%\usepackage[linkcolor=blue,colorlinks=true]{hyperref}
+\usepackage{tikz}
+
+
+\spanishdecimal{.}
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{MnSymbol}
+
+\usepackage{pgf}
+\usepackage{etex}
+\usepackage{tikz,pgfplots}
+ \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} 
+ 
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+
+\usetikzlibrary{calc,matrix}
+
+
+\tikzstyle{every picture}+=[remember picture]
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+urlcolor=blue, linkcolor=blue}
+
+\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfborder=0 0 0}
+
+\usepackage{booktabs,caption}
+\captionsetup[table]{name=Tabla} 
+\usepackage[flushleft]{threeparttable} 
+
+
+%--------------------------------------
+
+%----------------------------------------------------------------------------------
+% 2.Estilo de la pagina
+%----------------------------------------------------------------------------------
+\pagestyle{headandfoot}					% Opcion para tener headers y footers
+\headrule 											% Linea horizontal bajo el header
+
+\pagestyle{headandfoot}          % Opcion para tener headers y footers
+\headrule                       % Linea horizontal bajo el header
+\firstpageheader{\includegraphics[scale=0.07]{escudo1.pdf} }{}{Universidad de Chile\\
+Facultad de Economía y Negocios}
+\runningheader{\scriptsize{Universidad de Chile} \\ \scriptsize{Facultad de Economía y Negocios}}{\scriptsize}{\scriptsize{\includegraphics[scale=0.07]{escudo1.pdf}}}
+\footrule
+\footer{}{\scriptsize{P\'agina \thepage\ de \numpages}}{}
+\parindent = 0pt
+\renewcommand\partlabel{(\thepartno.)}
+\renewcommand\thesubpart{\roman{subpart}}
+\footrule
+\footer{}{\scriptsize{P\'agina \thepage\ de \numpages}}{}
+\parindent = 0pt
+\renewcommand\partlabel{(\thepartno.)}
+\renewcommand\thesubpart{\roman{subpart}}
+
+%----------------------------------------------------------------------------------
+% 3.Formato respuesta
+%----------------------------------------------------------------------------------
+
+
+\printanswers          % Esta opcion sirve para esconder las respuestas si
+                                % no se quiere imprimir las respuestas, colocar
+                                % \printanswers
+
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:}\par\noindent}
+
+
+%==================================================================================
+% II. Documento
+%==================================================================================
+\begin{document}
+\begin{center}
+\LARGE{{\textsc{Juegos \& Estrategias}}}\\
+\Large{{\textsc{Tarea 1}}}
+\end{center}
+
+\hline{}{}
+ \begin{flushleft}
+
+\end{flushleft}
+\hline{}{}
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Aqui comienza
+
+
+\section{Comentes}
+\begin{enumerate}[label=(\alph*)]
+    \item Explique que es un equilibrio de Nash y cuál es la diferencia con un Óptimo de Pareto. Luego responda, ¿Todo equilibrio de Nash es un Óptimo de Pareto?
+    \begin{solution}
+    Un equilibrio de Nash se refiere a una situación en donde todos los participantes se encuentran implementando su mejor respuestas, por lo que, no hay incentivos para desviarse unilateralmente. Lo mencionado anteriormente, no necesariamente calza con los equilibrios de Pareto, ya que estos consideran el bienestar de ambos agentes, es decir, no se puede mejorar a un individuo sin empeorar al otro individuo, en cambio, en el equilibrio de Nash sólo se considera el bienestar individual. Por lo tanto, no todo equilibrio de Nash es un óptimo de Pareto. 
+     \end{solution}
+    
+    \item La existencia de un equilibrio de Nash significa que necesariamente existe al menos una estrategia estrictamente dominante. Comente
+    \begin{solution}
+    Falso, a través de las estrategias dominantes se encontrarán equilibrios y éstos, siempre serán equilibrios de Nash. Sin embargo, cabe destacar que un equilibrio de Nash no necesariamente se dará la presencia de estrategias dominantes. Por ejemplo, algunos escenarios como se mencionan en la literatura: la guerra de los sexos, se da el caso que se obtienen 2 equilibrios de Nash, sin embargo, proviene de una estrategia mixta, es decir, no hay estrategias puras. Finalmente, para todo juego \textbf{siempre} hay un equilibrio de Nash, sólo que a veces el equilibrio viene dado por una estrategia mixta. 
+    \end{solution}
+    
+    \item En un juego con una matriz de pagos correctamente definida, nunca habrá dos equilibrios de Nash.
+    \begin{solution}
+    Falso. Pueden existir matriz de pagos que estén correctamente planteadas y definidas, y aún así pueden haber equilibrios de Nash múltiples, a modo de ejemplo tenemos los juegos según la literatura: 1) \textit{Chicken}, 2)\textit{Caza del Venado} y finalmente, tenemos el juego de 3) \textit{guerra de sexos}. Estos juegos tienen la particularidad que poseen 2 equilibrios de Nash. 
+    \end{solution}
+    
+    \item Pedro y Juana son dos pescadores artesanales en un pueblo muy lejano, donde sólo cuentan con un lago profundo donde pescar. Cada une tiene la opción de hacer una explotación cooperativa o una explotación individual (no cooperativa) de dicho lago. Dada esta situación de \textbf{Tragedia de los Comunes} y sus conocimientos sobre este problema, plantee una matriz de pagos y explique qué tipo de juego es.
+    \begin{solution}
+    El comente hace referencia al juego de la \textit{tragedia de los comunes}, que se trata de la tendencia a usar en exceso las propiedades comunales, provocando una externalidad, esto se traduce a básicamente Cooperar o No Cooperar. En este caso específico, tenemos que ambos pueden cooperar y obtener resultados positivos para cada uno. Sin embargo, hay incentivos a no cooperar, es decir, que cada uno tenga una explotación individual, por lo tanto, ambos individuos llegarán a un resultado no cooperativo subóptimo de Pareto, lo que se traduce a la sobreexplotación limitando el beneficio de cada uno. Se refiere a la tendencia a usar en exceso las propiedades comunales. Se trata de un tipo de externalidad (Varian,2006).
+    
+    Para generar la matriz de pagos, vamos a realizar una matriz de pagos correspondiente al juego del dilema del prisionero. 
+    Para esto, además, los montos serán ficticios. 
+    
+    
+  \begin{center}
+
+\begin{tikzpicture}[element/.style={minimum width=2.3cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Cooperar  & No Cooperar  \\
+Cooperar & |[draw]|-5,-5 & |[draw]|-1,-10 \\
+No Cooperar & |[draw]|-10,-1 & |[draw]|-2,-2 \\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textbf{Jugador 2}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.25,0)$){\textbf{Jugador 1}};
+\end{tikzpicture}
+    
+\end{center}
+
+    \end{solution}
+\end{enumerate}
+
+\newpage
+\section{Matemático 1: Dilema del prisionero}
+Imagine dos individuos que se ven enfrentados a la opción de cooperar o traicionarse debido a un delito previo. Por una parte, si ambos cooperan, tienen una pena de 1 año cada uno. Pero, si un individuo coopera y el otro traiciona, este recibe una pena de 10 años, mientras el otro de 0 a ̃nos. Ahora, si ambos se traicionan reciben una pena de 6 a ̃nos cada uno.
+  \begin{enumerate}[label=(\alph*), ref=\alph*]
+    \item Escriba la matriz de pagos correspondiente al juego.
+    \begin{solution}
+    Con los datos dados en el enunciado, obtendremos la siguiente matriz, donde cabe destacar, los valores se pondrán en valor negativo, ya que se refleja de mejor manera el impacto de los años en los cuales estarían preso, según cada decisión individual. 
+    
+
+
+\begin{center}
+
+\begin{tikzpicture}[element/.style={minimum width=1.85cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Cooperar  & Traicionar  \\
+Cooperar & |[draw]|-1,-1 & |[draw]|-10,0 \\
+Traicionar & |[draw]|0,-10 & |[draw]|-6,-6 \\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textbf{Jugador 2}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.25,0)$){\textbf{Jugador 1}};
+\end{tikzpicture}
+    
+\end{center}
+
+
+
+    \end{solution}
+    
+    \item Identifique el equilibrio de Nash. ¿Por qué no cooperar?
+    \begin{solution}
+    El equilibrio de Nash es (traicionar, traicionar), esto se explica ya que, tenemos que si el individuo 1 coopera, la mejor opción para el jugador 2 será traicionar, pero si el individuo 1 traiciona, entonces nuevamente su mejor opción será traicionar.\\
+    
+    Por otro lado, si el individuo 2 coopera, la mejor opción para el individuo 1 será traicionar, sin embargo, si el individuo 2 traiciona, entonces la mejor opción para el individuo 1, será traicionar. Llegando al equilibrio de Nash donde ambos individuos traicionan. 
+    Tal como se muestra en la siguiente matriz de pagos.
+  
+    \begin{center}
+
+\begin{tikzpicture}[element/.style={minimum width=1.75cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Cooperar  & Traicionar  \\
+Cooperar & |[draw]|-1,-1 & |[draw]|-10,\textcolor{blue}{0} \\
+Traicionar & |[draw]| \textcolor{red}{0},-10 & |[draw]|\textcolor{red}{-6},\textcolor{blue}{-6} \\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textcolor{blue}{\textbf{Jugador 2}}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.25,0)$){\textcolor{red}{\textbf{Jugador 1}}};
+\end{tikzpicture}
+    
+\end{center}
+
+Ambos deciden no cooperar, es decir, traicionar porque con las opciones individuales se ven menos perjudicados cuando traicionan. Si bien es un equilibrio de Nash, esto no es un óptimo de Pareto, ya que podrían estar mucho mejor si ambos decidieran cooperar. 
+    \end{solution}
+  \end{enumerate}
+
+Suponga ahora que los prisioneros logran salir de la cárcel y buscan qué hacer para celebrar su libertad. El individuo 1, que ahora sabe se llama Alejandro, propone ir a bailar, mientras que el individuo 2, llamada Camila, propone ir a acampar. A pesar de tener ideas distintas y no ponerse de acuerdo hay una cosa que tienen clara: quieren celebrar juntos.
+
+
+  \begin{enumerate}[resume*]
+    \item ¿A que tipo de juego corresponde esta situación? ¿existe un Pareto superior? ¿se genera un solo equilibrio o más?
+    \begin{solution}
+Podemos observar que estamos en presencia del juego denominado \textit{Guerra de los sexos}, donde deben decidir qué harán de forma conjunta, pero poseen preferencias diferentes. En este caso, se encuentran 2 equilibrios de Nash, sin embargo no son ranqueables paretianamente. Esto, dado que tendrían más utilidad si van juntos a realizar las actividades. 
+    \end{solution}
+    
+    \item Proponga una matriz de pagos que represente la situación planteada y encuentre el equilibrio de Nash.
+    \begin{solution}
+    Plantearemos la siguiente matriz de pagos:
+    
+        \begin{center}
+
+\begin{tikzpicture}[element/.style={minimum width=1.75cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Bailar  & Acampar  \\
+Bailar & |[draw]|\textcolor{cyan}{2},\textcolor{pink}{1} & |[draw]|0,0 \\
+Acampar & |[draw]| 0,0 & |[draw]|\textcolor{cyan}{1},\textcolor{pink}{2} \\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textcolor{pink}{\textbf{Camila}}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.25,0)$){\textcolor{cyan}{\textbf{Alejandro}}};
+\end{tikzpicture}
+    
+\end{center}
+
+Podemos observar que existen dos equilibrios de Nash, que se dan cuando ambos van a bailar y cuando ambos van a acampar. 
+    \end{solution}
+  \end{enumerate}
+
+\newpage
+
+\section{Matemático 2: Estrategias Puras y Mixtas}
+La familia Parr, más conocida como ”Los Increíbles”, se encuentra en un gran dilema. Recientemente la madre, Helen Parr (Alias Elastigirl), ha encontrado trabajo como asesora de ventas de la famosísima estilista Edna Modas. Si bien esta noticia fue celebrada por el padre de la familia, Bob (Mr. Increíble), y los hijos, Violeta, Dash y el bebé Jack-Jack, los adultos rápidamente se dieron cuenta que de ahora en adelante tendrían grandes dificultades para conciliar sus trabajos “normales con sus trabajos de superhéroes. El principal problema radica en que la efectividad para atrapar a los supervillanos aumenta si Helen y Bob se dedican en conjunto a esta tarea, y en cambio, la efectividad disminuye si sólo uno de ellos se dedica a atrapar supervillanos. De esta forma, si Helen y Bob deciden dedicar su tiempo a atrapar villanos, cada uno
+obtiene un pago de 100, pero si ambos deciden dedicar su tiempo a sus trabajos ”normales ̧cada uno obtiene
+un pago de 80, y finalmente, si uno de ellos opta por atrapar villanos y el otro no, entonces el primero obtiene
+un pago de 50 y el otro obtiene un pago de 110.
+
+  \begin{enumerate}[label=(\alph*), ref=\alph*]
+    \item Obtenga la matriz de pagos de este juego, y responda ¿Existe una estrategia dominante? ¿Y una estrategia dominada?
+    \begin{solution}
+    La matriz de pago para este caso será descrita como realizar labores de superhéroe, o sea, atrapar villano y razones laborales individuales. A continuación se muestra la matriz:
+    
+      
+  \begin{center}
+
+\begin{tikzpicture}[element/.style={minimum width=2.75cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Atrapar villanos  & Trabajo normal  \\
+Atrapar villanos & |[draw]|100,100 & |[draw]| 50,110 \\
+Trabajo Normal & |[draw]|110,50 & |[draw]|80,80 \\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textbf{Bob}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.75,0)$){\textbf{Helen}};
+\end{tikzpicture}
+    
+\end{center}
+    \end{solution}
+    
+    \item Obtenga el o los equilibrios de Nash en estrategias puras ¿Es este equilibrio un  óptimo de Pareto? ¿Corresponde a una solución cooperativa?
+    \begin{solution}
+     El equilibrio de Nash es (trabajo normal, trabajo normal), esto se explica ya que, tenemos que si el individuo 1 (Helen) decide atrapar villanos, la mejor opción para el jugador 2 (Bob) será trabajar de forma normal, pero si el individuo 1 (Helen) decide trabajar normal, entonces la mejor opción del jugador 2 (Bob) será trabajar normal.\\
+    
+    Por otro lado, si el individuo 2 (Bob) decide atrapar villanos, la mejor opción para el individuo 1 (Helen) será trabajar normal, sin embargo, si el individuo 2 (Bob) decide trabajar de forma normal, entonces la mejor opción para el individuo 1 (Helen), será trabajar de forma normal. Llegando al equilibrio de Nash donde ambos individuos trabajarán de forma normal. 
+    Tal como se muestra en la siguiente matriz de pagos.
+  
+\begin{center}
+      \begin{tikzpicture}[element/.style={minimum width=2.75cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Atrapar villanos  & Trabajo normal  \\
+Atrapar villanos & |[draw]|100,100 & |[draw]| 50,\textcolor{blue}{110} \\
+Trabajo Normal & |[draw]|\textcolor{red}{110},50 & |[draw]|\textcolor{red}{80},\textcolor{blue}{80} \\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textcolor{blue}{\textbf{Bob}}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.75,0)$){\textcolor{red}{\textbf{Helen}}};
+\end{tikzpicture}
+\end{center}
+
+
+
+Si bien es un equilibrio de Nash (trabajo normal, trabajo normal), esto no es un óptimo de Pareto, ya que podrían estar mucho mejor si ambos decidieran Atrapar villanos (mejora paretiana). \\
+
+Este equilibrio no corresponde a una solución cooperativa, ya que, existe una condición donde pueden mejorar ambas partes. La solución cooperativa esta dada por (atrapar villanos, atrapar villanos). Esta última estrategía es un Pareto superios, ya que, Bob y Helen se encuentran mejor que antes.
+    \end{solution}
+  \end{enumerate}
+
+Metroville, ciudad donde reside la familia Parr, ha caído en una terrible crisis económica derivada de la pandemia. Como en toda crisis, el desempleo se ha disparado, afectando directamente a Helen y Bob, quienes han sido despedidos de sus trabajos ”normales”. Dado esto, ahora Helen y Bob tienen dos opciones: quedarse en casa realizando labores domésticas y cuidando a sus querides hijes, o atrapar villanos (tomando todas las precauciones sanitarias obviamente). Bajo este nuevo escenario, si ambos se quedan en casa, cada uno obtiene un pago de 0, dado que no reciben ningún ingreso, en cambio, si uno de los padres se dedica a atrapar villanos y el otro se queda en casa, reciben un pago de 10 y 30 respectivamente. Finalmente, si ambos se dedican a atrapar villanos cada uno obtiene un pago de 20, debido a que Metroville ahora cuenta con un menor presupuesto para los superhéroes.
+
+
+  \begin{enumerate}[resume*]
+    \item Obtenga la nueva matriz de pagos y el o los equilibros de Nash en estrategias puras. Además señale si corresponde(n) a un  óptimo de Pareto y si es una solución cooperativa.
+    \begin{solution}
+Vamos a definir la matriz de pagos de la siguiente manera:
+    \begin{center}
+
+\begin{tikzpicture}[element/.style={minimum width=3.25cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Atrapar villanos  & Labores Domésticas  \\
+Atrapar villanos & |[draw]|20,20 & |[draw]| 10,30 \\
+Labores Domésticas & |[draw]|30,10 & |[draw]|0,0\\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textbf{Bob}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.95,0)$){\textbf{Helen}};
+\end{tikzpicture}
+\end{center}
+
+Luego, para obtener el o los equilibrios de Nash en estrategias puras, tenemos que: 
+    \begin{center}
+
+\begin{tikzpicture}[element/.style={minimum width=3.25cm,minimum height=0.85cm}]
+\matrix (m) [matrix of nodes,nodes={element},column sep=-\pgflinewidth, row sep=-\pgflinewidth,]{
+         & Atrapar villanos  & Labores Domésticas  \\
+Atrapar villanos & |[draw]|20,20 & |[draw]| \textcolor{violet}{10},\textcolor{orange}{30} \\
+Labores Domésticas & |[draw]|\textcolor{violet}{30},\textcolor{orange}{10} & |[draw]|0,0\\    };
+
+% \node[draw,element, anchor=west,label={above:\textbf{Name 3}}] at ($(m-2-3)!0.5!(m-3-3)+(1.25,0)$) {5}; % setting the node midway to cell 4 and cell 2 with a horizontal shift of 1.25cm
+
+\node[above=0.25cm] at ($(m-1-2)!0.5!(m-1-3)$){\textcolor{orange}{\textbf{Bob}}};
+\node[rotate=90] at ($(m-2-1)!0.5!(m-3-1)+(-1.95,0)$){\textcolor{violet}{\textbf{Helen}}};
+\end{tikzpicture}
+\end{center}
+Por lo tanto, existen dos equilibrios de Nash, (1) Helen se dedica labores domésticas mientras Bob atrapa villanos y (2)  Bob se dedica labores domésticas mientras Helen atrapa villanos.\\
+
+En este escenario, se presenta el juego de Chiken. Se debe destacar que los equilibrios del Juego de Chiken no son rankeables en términos paretianos. Un individuo siempre tendrá como mejor estrategia la opuesta al otro, y en este caso no podemos decir que habrá  mejoras de Pareto, ya que para que uno mejore el otro tendrá que empeorar.\\
+
+En conclusión, estos tipos de juego no presentarán soluciones cooperativas.  Tampoco óptimos de pareto. Además no existen estrategias dominantes.
+    \end{solution}
+    
+    \item Encuentre las funciones de reacción de Helen y Bob en estrategias mixtas. Para esto considere que Helen y Bob escogen atrapar villanos con una probabilidad de $q$ y $p$ respectivamente.
+    \begin{solution}
+    
+
+Para determinar la existencia de equilibrios de Nash en estrategias mixtas, primero definimos las probabilidades asociadas a las decisiones de los jugadores. Definimos la jugada de atrapar villanos como \textbf{A} y la jugada de labores domésticas será \textbf{L}. \\
+
+Sea $q$ la probabilidad de que Jugador 1 (Helen) juegue \textbf{A} y $(1-q)$ la probabilidad de que juegue \textbf{L}. Sea $p$ la probabilidad de que Jugador 2 (Bob) juegue \textbf{A} y $(1-p)$ la probabilidad de que juegue \textbf{L}. Así, la utilidad esperada del jugador 1 viene dada por:
+
+ \begin{align*}
+  UE_1 &= q \cdot p \cdot 20 + q \cdot (1-p) \cdot 10 + (1-q)\cdot p \cdot 30 + (1-q) \cdot (1-p) \cdot 0 \\
+    &= -20\cdot p \cdot q +30 \cdot p + 10\cdot q
+\end{align*}
+
+Y para el jugador 2 la utilidad esperada se puede escribir como:
+
+\begin{align*}
+  UE_2 &= q \cdot p \cdot 20 + q \cdot (1-p) \cdot 30 + (1-q)\cdot p \cdot 10 + (1-q) \cdot (1-p) \cdot 0 \\
+    &= -20\cdot p \cdot q +30 \cdot q + 10\cdot p
+\end{align*}
+
+Se calculará para cada jugador, la estrategia mixta del otro jugador bajo la cual el primero está indiferente entre cualquier estrategia.\\
+
+Una forma sencilla de calcular esto es derivando la utilidad esperada e igualando esta derivada a cero:
+
+$$\frac{\partial UE_1}{\partial q}= 20\cdot p + 10 = 0$$
+$$p=\frac{1}{2}$$
+
+Esto significa que si J2 juega con probabilidad $\frac{1}{2}$ \textbf{A} y con probabilidad $\frac{1}{2}$ \textbf{L}, entonces J1 estará indiferente entre cualquier probabilidad $q$ que pueda asignar él mismo (tanto \textbf{A} como \textbf{L} tienen el mismo valor
+esperado). Haciendo el mismo cálculo para el jugador 2 se tiene que $q=\frac{1}{2}$ es la probabilidad bajo la cual J2 estará indiferente entre sus dos jugadas.\\
+
+Dado lo anterior, se desprenden las funciones de reacción. Veamos primero la función de reacción de J1. Ya sabemos que si $p=\frac{1}{2}$ entonces estará indiferente entre \textbf{A} y \textbf{L} y, por lo tanto cualquier probabilidad $q$ será óptima (nótese que si $p=1/2$ entonces la UE de J1 no depende de $q$, sino que será siempre igual a 15). Ahora, si $p<\frac{1}{2}$ notamos que ($-20pq+30p$) será cada vez más pequeño, por lo tanto le conviene que $30p$ sea lo más grande posible para maximizar la UE, dado que $30p$ no descontará el termino q. Así, lo óptimo será que $q=1$ (de lo contrario la UE será inferior a 15). Por el contrario, si $p>\frac{1}{2}$, tenemos ($-20pq+30p$) se vuelve muy grande, por lo tanto a J1 le conviene que $30p$ sea grande. Así el óptimo será que $q=0$. Luego, podemos definir la función de reacción de J1 como:
+
+\begin{equation}
+             q(p)= \left\{ \begin{array}{ll}
+             {[}0,1{]} &  \text{si} \quad p = \frac{1}{2} \\
+             1 & \text{si} \quad p<\frac{1}{2}\\
+             0 & \text{si} \quad p>\frac{1}{2}\\
+             
+             \end{array} \right.
+                 \label{fun reaccion DD j1}
+             \end{equation}
+ Si hacemos el mismo análisis para J2 podemos escribir la función de reacción como:           
+             \begin{equation}
+             p(q)= \left\{ \begin{array}{ll}
+             {[}0,1{]} &  \text{si} \quad q = \frac{1}{2} \\
+             1 & \text{si} \quad q<\frac{1}{2}\\
+             0 & \text{si} \quad q>\frac{1}{2}\\
+             
+             \end{array} \right.
+                 \label{fun reaccion DD j2}
+             \end{equation}
+    
+
+
+    \end{solution}
+    
+    \item Grafique en un plano $(p, q)$ los resultados obtenidos en el apartado anterior. Luego explique cuál sería el equilibrio de Nash en estrategias mixtas.
+    \begin{solution}
+        De las funciones de reacción presentadas en la \autoref{fun reaccion DD j1} y \autoref{fun reaccion DD j2} se extre que la única combinación de estrategias mixtas bajo la cual no hay incentivos a desviarse es $p=q=1/2$. El único equilibiro de Nash en estrategias mixtas es, entonces, $\left(\frac{1}{2},\frac{1}{2} \right).$
+        
+        
+      \begin{center}
+          
+  
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Axis 2D [id:dp10075097520928122] 
+\draw  (246.7,242) -- (479.66,242)(270,48.5) -- (270,263.5) (472.66,237) -- (479.66,242) -- (472.66,247) (265,55.5) -- (270,48.5) -- (275,55.5)  ;
+%Straight Lines [id:da7285292455994903] 
+\draw [color={rgb, 255:red, 189; green, 16; blue, 224 }  ,draw opacity=1 ][line width=1.5]    (347.5,88.25) -- (424,88) ;
+%Straight Lines [id:da20338147405387996] 
+\draw [color={rgb, 255:red, 189; green, 16; blue, 224 }  ,draw opacity=1 ][line width=1.5]    (270,242) -- (350.5,242.25) ;
+%Straight Lines [id:da9978578095838408] 
+\draw [color={rgb, 255:red, 189; green, 16; blue, 224 }  ,draw opacity=1 ][line width=1.5]    (347.5,88.25) -- (350.5,242.25) ;
+%Straight Lines [id:da8621712196164331] 
+\draw [color={rgb, 255:red, 16; green, 224; blue, 21 }  ,draw opacity=1 ][line width=1.5]    (271,155.5) -- (420.5,154.75) ;
+%Straight Lines [id:da5811595562089096] 
+\draw [color={rgb, 255:red, 16; green, 224; blue, 21 }  ,draw opacity=1 ][line width=1.5]    (420.5,154.75) -- (420.5,241.25) ;
+%Straight Lines [id:da5602091656388424] 
+\draw [color={rgb, 255:red, 16; green, 224; blue, 21 }  ,draw opacity=1 ][line width=1.5]    (271,89.25) -- (271,155.5) ;
+
+% Text Node
+\draw (245.5,44.9) node [anchor=north west][inner sep=0.75pt]    {$q$};
+% Text Node
+\draw (459.5,250.4) node [anchor=north west][inner sep=0.75pt]    {$p$};
+% Text Node
+\draw (416,245.9) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (253.5,79.4) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (245.5,147.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {${\displaystyle 0.5}$};
+% Text Node
+\draw (343.5,249.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$0.5$};
+% Text Node
+\draw (435,213.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,color={rgb, 255:red, 16; green, 224; blue, 21 }  ,opacity=1 ]  {$p( q)$};
+% Text Node
+\draw (429,82.9) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize,color={rgb, 255:red, 189; green, 16; blue, 224 }  ,opacity=1 ]  {$q( p)$};
+
+
+\end{tikzpicture}
+     \end{center} 
+La línea morada es la función de reacción de J1, $q(p)$. La verde es la función de reacción de J2, $p(q)$. Vemos que se cruzan en el punto $\left(\frac{1}{2},\frac{1}{2} \right)$, que por lo tanto, es el \textbf{equilibrio de Nash} en estrategias mixtas.
+    \end{solution}
+    
+
+
+  \end{enumerate}
+
+% \newpage
+% \section*{Referencias}
+% \begin{enumerate}
+%     \item Varian, H. (2006),\textit{ Microeconomía Intermedia, un enfoque actual}, 7a Ed., Antoni Bosch.
+%     \end{enumerate}
+\end{document}
+
+
+%     Las probabilidades asignadas a las decisiones del jugador 1 (Helen) son:
+% \begin{center}
+% \begin{tabular}{c|c}
+% Decisiones & Prob()\\ \hline
+%      \textbf{A}& $q$\\
+%      \textbf{L} &$1-q$\\ 
+% \end{tabular}
+% \end{center}
+
+% Las probabilidades asignadas a las decisiones del jugador 2 (Bob) son:
+%     \begin{center}
+%     \begin{tabular}{c|c|c}
+%      Decisiones&\textbf{A}& \textbf{L}   \\ \hline
+%      Prob()&$p$&$1-p$ 
+% \end{tabular}
+% \end{center}
+
+% A continuación se asignará las probabilidades que afectan al juego del jugador 2:
+
+% $$\textbf{A}:q \cdot 20 + (1-q) \cdot 10 $$
+% $$\textbf{L}:q \cdot 30 + (1-q) \cdot 0 $$
+
+% Se logra identificar una relación en base a las asignaciones de probabilidad en el juego con el jugador 2:
+
+% \begin{itemize}
+%     \item Si  usamos $A=L$ 
+%  \begin{align*}
+%   q \cdot 20 + (1-q) \cdot 10 &= q \cdot 30 + (1-q) \cdot 0\\
+%     (1-q) \cdot 10 &= q \cdot 30 - q \cdot 20\\
+%     10 -10\cdot q &= 10 \cdot q\\
+%     q &= \frac{1}{2}
+% \end{align*}
+% \end{itemize}
+
+% Por lo tanto, encontramos las probabilidades asociadas a las decisiones del jugador 1.
+% $$q &= \frac{1}{2} \hspace{2cm} (1-q) &= \frac{1}{2}$$
+% Dado que los valores encontrados pertenecen al intervalo $[0,1]$, se logra concluir que existe equilibrio de Nash de estrategia mixta.\\
+
+
+% También se puede realizar la asignación de probabilidad afecta al juego del Jugador 1 (Helen).
+
+% $$\textbf{A}:p \cdot 20 + (1-p) \cdot 10 $$
+% $$\textbf{L}:p \cdot 30 + (1-p) \cdot 0 $$
+
+% Se logra identificar una relación en base a las asignaciones de probabilidad en el juego con el jugador 1:
+
+% \begin{itemize}
+%     \item Si  usamos $A=L$ 
+%  \begin{align*}
+%   p \cdot 20 + (1-p) \cdot 10 &= p \cdot 30 + (1-p) \cdot 0\\
+%     (1-p) \cdot 10 &= p \cdot 30 - p \cdot 20\\
+%     10 -10\cdot p &= 10 \cdot p\\
+%     p &= \frac{1}{2}
+% \end{align*}
+% \end{itemize}
+
+% Por lo tanto, encontramos las probabilidades asociadas a las decisiones del jugador 2.
+% $$p &= \frac{1}{2} \hspace{2cm} (1-p) &= \frac{1}{2}$$
+% Dado que los valores encontrados pertenecen al intervalo $[0,1]$, se logra concluir que existe equilibrio de Nash de estrategia mixta.\\
