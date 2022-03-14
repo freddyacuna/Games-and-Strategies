@@ -1,0 +1,161 @@
+\documentclass{exam}
+
+
+%==================================================================================
+% I. Preambulo
+%==================================================================================
+%----------------------------------------------------------------------------------
+% 1.Paquetes
+%----------------------------------------------------------------------------------
+\usepackage[spanish]{babel}			% Permite escribir en espanol
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}						% Para ecuaciones y demases
+\usepackage{amsthm}							% Para ecuaciones y demases
+\usepackage{amssymb}						% Para ecuaciones y demases
+\usepackage{graphicx} 					% Para insertar graficos
+\usepackage{float}							% Para manejar la ubicacion de graficos
+\usepackage{verbatim}						% Para escribir codigos
+\usepackage{url}								% Para escribir direcciones web
+\usepackage{subfig}							% Para poner varias figuras en el mismo marco
+\usepackage{psfrag}							% Para hacer reemplazos en las figuras
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{bigstrut}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{geometry}
+
+\usepackage{color}
+	\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+	\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
+	\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+\usepackage{multirow,hhline}
+%\usepackage[linkcolor=blue,colorlinks=true]{hyperref}
+\usepackage{tikz}
+
+
+\spanishdecimal{.}
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{MnSymbol}
+
+\usepackage{pgf}
+\usepackage{etex}
+\usepackage{tikz,pgfplots}
+ \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} 
+ 
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+
+\usetikzlibrary{calc,matrix}
+
+
+\tikzstyle{every picture}+=[remember picture]
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+urlcolor=blue, linkcolor=blue}
+
+\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfborder=0 0 0}
+
+\usepackage{booktabs,caption}
+\captionsetup[table]{name=Tabla} 
+\usepackage[flushleft]{threeparttable} 
+
+
+%--------------------------------------
+
+%----------------------------------------------------------------------------------
+% 2.Estilo de la pagina
+%----------------------------------------------------------------------------------
+\pagestyle{headandfoot}					% Opcion para tener headers y footers
+\headrule 											% Linea horizontal bajo el header
+
+\pagestyle{headandfoot}          % Opcion para tener headers y footers
+\headrule                       % Linea horizontal bajo el header
+\firstpageheader{\includegraphics[scale=0.07]{escudo1.pdf} }{}{Universidad de Chile\\
+Facultad de Economía y Negocios}
+\runningheader{\scriptsize{Universidad de Chile} \\ \scriptsize{Facultad de Economía y Negocios}}{\scriptsize}{\scriptsize{\includegraphics[scale=0.07]{escudo1.pdf}}}
+\footrule
+\footer{}{\scriptsize{P\'agina \thepage\ de \numpages}}{}
+\parindent = 0pt
+\renewcommand\partlabel{(\thepartno.)}
+\renewcommand\thesubpart{\roman{subpart}}
+\footrule
+\footer{}{\scriptsize{P\'agina \thepage\ de \numpages}}{}
+\parindent = 0pt
+\renewcommand\partlabel{(\thepartno.)}
+\renewcommand\thesubpart{\roman{subpart}}
+
+%----------------------------------------------------------------------------------
+% 3.Formato respuesta
+%----------------------------------------------------------------------------------
+
+
+\noprintanswers          % Esta opcion sirve para esconder las respuestas si
+                                % no se quiere imprimir las respuestas, colocar
+                                % \printanswers
+
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:}\par\noindent}
+
+
+%==================================================================================
+% II. Documento
+%==================================================================================
+\begin{document}
+\begin{center}
+\LARGE{{\textsc{Juegos \& Estrategias}}}\\
+\Large{{\textsc{HW 2}}}
+\end{center}
+
+\hline{}{}
+ \begin{flushleft}
+
+\end{flushleft}
+\hline{}{}
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Aqui comienza
+
+\section{The Cost of Price Incentives: An Empirical Analysis of Motivation Crowding-Out} %By Bruno S. Frey and Felix Oberholzer-Gee
+
+\begin{enumerate}
+    \item Explique el concepto de "motivation crowding out" y 
+    \item Muestre claramente el problema de identificación. Discuta la implementación de los mecanismos en base al caso de estudio.
+    \item Resuma los principales resultados encontrados en el texto de Frey y Oberhorzel-Gee (1997)
+\end{enumerate}
+
+
+\section{The Trouble with Stock Options} %Brian J. Hall and Kevin J. Murphy
+
+\begin{enumerate}
+    \item Explique la diferencia entre "perceived cost" de una opción versus el costo económico de una opción.
+    \item Presente una discusión del por qué la diferencia anterior explica la popularidad de otorgar stock options a los ejecutivos.
+    \item Resuma los principales resultados encontrados en el texto de Hall y Murphy (2003)
+\end{enumerate}
+
+
+\section{Lucky CEOs and Lucky Directors} % Lucian A. Bebchuk, Yaniv Grinstein and URS Peyer
+  
+  \begin{enumerate}
+    \item Explique el concepto de "oportunistic timing" descrito en base al texto de Bebchuk et al (2010).
+    \item Explique porque la palabra  "Lucky" es usada como ironía descrito en base al texto de Bebchuk et al (2010).
+    \item Resuma los principales resultados encontrados en el texto de Bebchuk et al (2010).
+\end{enumerate}
+
+
+  \end{document}
