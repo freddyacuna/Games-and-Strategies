@@ -1,0 +1,208 @@
+\documentclass{exam}
+
+
+%==================================================================================
+% I. Preambulo
+%==================================================================================
+%----------------------------------------------------------------------------------
+% 1.Paquetes
+%----------------------------------------------------------------------------------
+\usepackage[spanish]{babel}			% Permite escribir en espanol
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}						% Para ecuaciones y demases
+\usepackage{amsthm}							% Para ecuaciones y demases
+\usepackage{amssymb}						% Para ecuaciones y demases
+\usepackage{graphicx} 					% Para insertar graficos
+\usepackage{float}							% Para manejar la ubicacion de graficos
+\usepackage{verbatim}						% Para escribir codigos
+\usepackage{url}								% Para escribir direcciones web
+\usepackage{subfig}							% Para poner varias figuras en el mismo marco
+\usepackage{psfrag}							% Para hacer reemplazos en las figuras
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{bigstrut}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{geometry}
+
+\usepackage{color}
+	\definecolor{ceruleanblue}{rgb}{0.16, 0.32, 0.75}
+	\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
+	\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+\usepackage{multirow,hhline}
+%\usepackage[linkcolor=blue,colorlinks=true]{hyperref}
+\usepackage{tikz}
+
+
+\spanishdecimal{.}
+
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{MnSymbol}
+
+\usepackage{pgf}
+\usepackage{etex}
+\usepackage{tikz,pgfplots}
+ \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} 
+ 
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+
+\usetikzlibrary{calc,matrix}
+
+
+\tikzstyle{every picture}+=[remember picture]
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+urlcolor=blue, linkcolor=blue}
+
+\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfborder=0 0 0}
+
+\usepackage{booktabs,caption}
+\captionsetup[table]{name=Tabla} 
+\usepackage[flushleft]{threeparttable} 
+
+
+%--------------------------------------
+
+%----------------------------------------------------------------------------------
+% 2.Estilo de la pagina
+%----------------------------------------------------------------------------------
+\pagestyle{headandfoot}					% Opcion para tener headers y footers
+\headrule 											% Linea horizontal bajo el header
+
+\pagestyle{headandfoot}          % Opcion para tener headers y footers
+\headrule                       % Linea horizontal bajo el header
+\firstpageheader{\includegraphics[scale=0.07]{escudo1.pdf} }{}{Universidad de Chile\\
+Facultad de Economía y Negocios}
+\runningheader{\scriptsize{Universidad de Chile} \\ \scriptsize{Facultad de Economía y Negocios}}{\scriptsize}{\scriptsize{\includegraphics[scale=0.07]{escudo1.pdf}}}
+\footrule
+\footer{}{\scriptsize{P\'agina \thepage\ de \numpages}}{}
+\parindent = 0pt
+\renewcommand\partlabel{(\thepartno.)}
+\renewcommand\thesubpart{\roman{subpart}}
+\footrule
+\footer{}{\scriptsize{P\'agina \thepage\ de \numpages}}{}
+\parindent = 0pt
+\renewcommand\partlabel{(\thepartno.)}
+\renewcommand\thesubpart{\roman{subpart}}
+
+%----------------------------------------------------------------------------------
+% 3.Formato respuesta
+%----------------------------------------------------------------------------------
+
+
+\noprintanswers          % Esta opcion sirve para esconder las respuestas si
+                                % no se quiere imprimir las respuestas, colocar
+                                % \printanswers
+
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Respuesta:}\par\noindent}
+
+
+%==================================================================================
+% II. Documento
+%==================================================================================
+\begin{document}
+\begin{center}
+\LARGE{{\textsc{Juegos \& Estrategias}}}\\
+\Large{{\textsc{Tarea 3}}}
+\end{center}
+
+\hline{}{}
+ \begin{flushleft}
+
+\end{flushleft}
+\hline{}{}
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Aqui comienza
+
+
+\section{Problema mundo laboral}
+
+En el mercado laboral hay un gran número de firmas neutrales al riesgo que compiten por trabajadores. Estos pueden ser de dos tipos: de alta ó baja habilidad, los cuales tienen una productividad de \$100 y \$50 cuando no poseen escolaridad. Previo a ingresar al mundo laboral, los trabajadores pueden escoger años de escolaridad. La productividad laboral se incrementa en \$1 por cada año adicional de educación. Acumular un año más de escolaridad tienen un costo (en tiempo y energía) de \$4 para trabajadores de alta habilidad y \$6 para los de baja habilidad. Se pide lo siguiente:
+
+\begin{enumerate}
+    
+\item Explicite las funciones de utilidad de ambos tipos de trabajadores.
+ \subsection*{Solución:}
+ 
+Como hay un gran número de firmas neutrales al riesgo que compiten por trabajadores podemos asumir que el mercado es perfectamente competitivo, es decir, el salario va a ser igual a la productividad
+marginal. También asumimos información completa y perfecta, sólo para este item. La función de utilidad para los trabajadores de alta productividad es:
+
+\begin{equation}
+    U_alta=100+educ−4educ=100−3educ
+    \label{fx utilidad para los trabajadores de alta productividad}
+\end{equation}
+
+
+\item Asuma ahora un contexto de información incompleta, donde los trabajadores conocen privadamente su habilidad. Obtenga el Equilibrio separador. Explique conceptualmente su resultado.
+
+\item Sea $\alpha$ la probabilidad (o frecuencia) de que un trabajador sea de alta habilidad. Proponga un mezclador
+asumiendo $\alpha= 0,5$.
+\end{enumerate}
+
+
+\section{Principal Activo: Parte I}
+
+El principal activo de un individuo cuyo nivel de riqueza es $W = 100$, es su casa. Enfrenta un riesgo de incendio con probabilidad $25\%$ , en el que perderá $64$. La utilidad del dinero está dada por la función de utilidad $v(w)$ que cumple la regla de la utilidad esperada, y que tiene la forma $v(w) = w^{1/2} $.
+
+\begin{enumerate}
+
+\item  ¿Cuánto es lo máximo que está dispuesto a pagar por un seguro de cobertura completa?
+
+\item ¿Cuál es la mayor prima (precio) que puede cobrar la única compañía de seguros de la ciudad?
+
+\item Suponga que en la ciudad hay un gran número de individuos exactamente iguales, todos los cuales se aseguran y no hay otros interesados en asegurarse. Suponiendo que el único costo de la única empresa aseguradora es pagar a los asegurados que sufren siniestros, determine los beneficios de la empresa (recuerde la ley de los grandes números ).
+\end{enumerate}
+
+\section{Principal Activo: Parte II}
+
+Asuma el mismo escenario que en el apartado anterior. Responda las siguientes preguntas:
+\begin{enumerate}
+    \item Suponga que una vez comprado el seguro los individuos dejan de tomar precauciones. El cambio de conducta que equivale a un aumento de la riqueza de $\$2$, pero aumenta la probabilidad de que ocurra un incendio $35 \%$. ¿Qué sucede con el mercado?
+
+\item ¿Qué ocurre si la compañía de seguros coloca un deducible de $\$7.5$ y reduce el costo del seguro a $\$17$
+
+\item Muestre que la aseguradora determina la combinación óptima de prima total R y deducible D resolviendo el siguiente problema:
+
+$$ \max_{R,D} R - 0,25 \cdot (64 - D)$$
+
+Sujeto a:
+
+$$0,25 \cdot (100 - R - D)^{1/2} + 0,75 \cdot (100 - R)^{1/2} \geq 9$$
+
+$$0,35 \cdot (102 - R - D)^{1/2} + 0,65 \cdot (102 - R)^{1/2} \leq 9$$
+
+\item Imagine que instalando un sistema de detección de humo que cuesta \$0,2 la probabilidad de incendio se
+reduce a 25\% aunque la persona se comporte en forma descuidada. ¿Qué puede ocurrir en el mercado?
+\end{enumerate}
+
+
+
+\section{Bonus}
+
+Suponga que en el mercado laboral existe un gran número de trabajadores, cuyas productividades laborales individuales a se obtienen de una función de densidad uniforme en el intervalo $[1, 5]$. La productividad fuera del mercado laboral de los trabajadores de tipo a es $r(a) = a - 1$. Asuma también que las firmas son neutras al riesgo y compiten entre ellas en la contratación de trabajadores ofreciendo salarios (w).
+
+\begin{enumerate}
+    
+\item  Encuentre el equilibrio competitivo bajo el supuesto que a es de público conocimiento, esto es, a es observable para todos los participantes del mercado laboral. ¿Es este equilibrio eficiente? Explique.
+
+\item Encuentre el equilibrio competitivo cuando los trabajadores conocen privadamente sus propias productividades laborales (a). ¿Es este equilibrio eficiente? Explique.
+
+\end{enumerate}
+  \end{document}
